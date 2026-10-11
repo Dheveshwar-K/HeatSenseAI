@@ -1,0 +1,177 @@
+{
+  "champion_model": "RandomForest",
+  "trained_at": "2026-09-25T19:03:20.082603Z",
+  "feature_columns": [
+    "temperature",
+    "relative_humidity",
+    "dew_point",
+    "wind_speed",
+    "solar_radiation",
+    "heat_index",
+    "wet_bulb_temp",
+    "simplified_wbgt",
+    "apparent_temp",
+    "temp_rate_of_change",
+    "humidity_rate_of_change",
+    "rolling_temp_3h",
+    "rolling_temp_6h",
+    "rolling_temp_24h",
+    "sin_hour",
+    "cos_hour"
+  ],
+  "class_names": [
+    "LOW",
+    "MODERATE",
+    "HIGH",
+    "VERY HIGH",
+    "EXTREME"
+  ],
+  "benchmark_comparison": {
+    "LogisticRegression": {
+      "val_accuracy": 0.8912,
+      "val_macro_recall": 0.8663,
+      "val_macro_f1": 0.8458,
+      "test_accuracy": 0.8741,
+      "test_macro_recall": 0.8604,
+      "test_macro_f1": 0.8317
+    },
+    "DecisionTree": {
+      "val_accuracy": 0.8776,
+      "val_macro_recall": 0.8126,
+      "val_macro_f1": 0.8115,
+      "test_accuracy": 0.9082,
+      "test_macro_recall": 0.8661,
+      "test_macro_f1": 0.8631
+    },
+    "RandomForest": {
+      "val_accuracy": 0.8946,
+      "val_macro_recall": 0.8498,
+      "val_macro_f1": 0.8438,
+      "test_accuracy": 0.9116,
+      "test_macro_recall": 0.8877,
+      "test_macro_f1": 0.875
+    },
+    "GradientBoosting": {
+      "val_accuracy": 0.9014,
+      "val_macro_recall": 0.8374,
+      "val_macro_f1": 0.8417,
+      "test_accuracy": 0.915,
+      "test_macro_recall": 0.8617,
+      "test_macro_f1": 0.8683
+    },
+    "SVC": {
+      "val_accuracy": 0.881,
+      "val_macro_recall": 0.8566,
+      "val_macro_f1": 0.834,
+      "test_accuracy": 0.8503,
+      "test_macro_recall": 0.8366,
+      "test_macro_f1": 0.8062
+    }
+  },
+  "test_classification_report": {
+    "LOW": {
+      "precision": 0.9736842105263158,
+      "recall": 0.9367088607594937,
+      "f1-score": 0.9548387096774194,
+      "support": 79.0
+    },
+    "MODERATE": {
+      "precision": 0.8292682926829268,
+      "recall": 0.918918918918919,
+      "f1-score": 0.8717948717948718,
+      "support": 37.0
+    },
+    "HIGH": {
+      "precision": 0.7857142857142857,
+      "recall": 0.8148148148148148,
+      "f1-score": 0.8,
+      "support": 27.0
+    },
+    "VERY HIGH": {
+      "precision": 0.7435897435897436,
+      "recall": 0.8285714285714286,
+      "f1-score": 0.7837837837837838,
+      "support": 35.0
+    },
+    "EXTREME": {
+      "precision": 0.990909090909091,
+      "recall": 0.9396551724137931,
+      "f1-score": 0.9646017699115044,
+      "support": 116.0
+    },
+    "accuracy": 0.9115646258503401,
+    "macro avg": {
+      "precision": 0.8646331246844726,
+      "recall": 0.8877338390956899,
+      "f1-score": 0.8750038270335159,
+      "support": 294.0
+    },
+    "weighted avg": {
+      "precision": 0.9176508868919337,
+      "recall": 0.9115646258503401,
+      "f1-score": 0.9136561430717459,
+      "support": 294.0
+    }
+  },
+  "test_confusion_matrix": [
+    [
+      74,
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      34,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      22,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      5,
+      29,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      7,
+      109
+    ]
+  ],
+  "feature_importances": {
+    "simplified_wbgt": 0.1968,
+    "heat_index": 0.1935,
+    "apparent_temp": 0.1614,
+    "wet_bulb_temp": 0.1182,
+    "temperature": 0.0682,
+    "rolling_temp_3h": 0.0587,
+    "dew_point": 0.0434,
+    "rolling_temp_6h": 0.0373,
+    "rolling_temp_24h": 0.0328,
+    "solar_radiation": 0.0274,
+    "relative_humidity": 0.0176,
+    "wind_speed": 0.0176,
+    "sin_hour": 0.0072,
+    "temp_rate_of_change": 0.0071,
+    "humidity_rate_of_change": 0.0068,
+    "cos_hour": 0.0059
+  },
+  "dataset_split": {
+    "train_samples": 1372,
+    "val_samples": 294,
+    "test_samples": 294,
+    "total_samples": 1960
+  }
+}
